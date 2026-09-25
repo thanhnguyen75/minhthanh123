@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dang Ky</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            font-size: 28px;
+        }
+
+        .form-box {
+            width: 520px;
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .label {
+            width: 200px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select {
+            width: 300px;
+            height: 35px;
+            font-size: 22px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            width: 22px;
+            height: 22px;
+        }
+
+        .gender {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .gender label {
+            margin-right: 10px;
+        }
+
+        .button {
+            text-align: right;
+        }
+
+        button {
+            font-size: 22px;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+
+        <div class="row">
+            <div class="label">Enter name:</div>
+            <input type="text">
+        </div>
+
+        <div class="row">
+            <div class="label">Enter password:</div>
+            <input type="password">
+        </div>
+
+        <div class="row">
+            <div class="label">Enter Email:</div>
+            <input type="email">
+        </div>
+
+        <div class="row">
+            <div class="label">Enter Gender:</div>
+
+            <div class="gender">
+                <input type="radio" name="gender" value="male">
+                <label>male</label>
+
+                <input type="radio" name="gender" value="female">
+                <label>female</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="label">Select Country:</div>
+
+            <select>
+                <option>Lao</option>
+                <option>Vietnam</option>
+                <option>Japan</option>
+                <option>USA</option>
+                <option>China</option>
+            </select>
+        </div>
+
+        <div class="button">
+            <button type="submit">register</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
