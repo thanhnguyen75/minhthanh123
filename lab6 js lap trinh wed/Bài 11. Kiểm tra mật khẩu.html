@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11 - Kiểm tra mật khẩu</title>
+</head>
+<body>
+    <h2>Kiểm tra mật khẩu</h2>
+
+    <input type="password" id="matKhau" placeholder="Nhập mật khẩu">
+    <button onclick="kiemTra()">Kiểm tra</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function kiemTra() {
+            let mk = document.getElementById("matKhau").value;
+
+            if (mk.length >= 8) {
+                document.getElementById("ketqua").innerText =
+                    "Mật khẩu hợp lệ!";
+            } else {
+                document.getElementById("ketqua").innerText =
+                    "Mật khẩu quá ngắn!";
+            }
+        }
+    </script>
+</body>
+</html>

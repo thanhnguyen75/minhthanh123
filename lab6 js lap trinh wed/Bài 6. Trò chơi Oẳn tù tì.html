@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6 - Oẳn tù tì</title>
+</head>
+<body>
+    <h2>Trò chơi Oẳn tù tì</h2>
+
+    <button onclick="choi('Đá')">Đá</button>
+    <button onclick="choi('Giấy')">Giấy</button>
+    <button onclick="choi('Kéo')">Kéo</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function choi(nguoiChoi) {
+            let luaChon = ["Đá", "Giấy", "Kéo"];
+            let may = luaChon[Math.floor(Math.random() * 3)];
+            let ketQua;
+
+            if (nguoiChoi === may) {
+                ketQua = "Hòa!";
+            } else if (
+                (nguoiChoi === "Đá" && may === "Kéo") ||
+                (nguoiChoi === "Giấy" && may === "Đá") ||
+                (nguoiChoi === "Kéo" && may === "Giấy")
+            ) {
+                ketQua = "Bạn thắng!";
+            } else {
+                ketQua = "Bạn thua!";
+            }
+
+            document.getElementById("ketqua").innerText =
+                "Bạn: " + nguoiChoi +
+                " | Máy: " + may +
+                " | " + ketQua;
+        }
+    </script>
+</body>
+</html>

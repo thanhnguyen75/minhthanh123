@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 12 - Năm nhuận</title>
+</head>
+<body>
+    <h2>Kiểm tra năm nhuận</h2>
+
+    <input type="number" id="nam" placeholder="Nhập năm">
+    <button onclick="kiemTra()">Kiểm tra</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function kiemTra() {
+            let s = document.getElementById("nam").value;
+            let nam = Number(s);
+
+            if (s === "" || !Number.isInteger(nam) || nam < 1) {
+                document.getElementById("ketqua").innerText =
+                    "Năm không hợp lệ!";
+            } else if (
+                nam % 400 === 0 ||
+                (nam % 4 === 0 && nam % 100 !== 0)
+            ) {
+                document.getElementById("ketqua").innerText =
+                    nam + " là năm nhuận";
+            } else {
+                document.getElementById("ketqua").innerText =
+                    nam + " không phải năm nhuận";
+            }
+        }
+    </script>
+</body>
+</html>

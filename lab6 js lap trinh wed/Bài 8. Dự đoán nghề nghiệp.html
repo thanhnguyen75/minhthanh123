@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8 - Dự đoán nghề nghiệp</title>
+</head>
+<body>
+    <h2>Dự đoán nghề nghiệp</h2>
+
+    <input type="text" id="ten" placeholder="Nhập tên của bạn">
+    <button onclick="duDoan()">Dự đoán</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function duDoan() {
+            let ten = document.getElementById("ten").value.trim();
+
+            if (ten === "") {
+                document.getElementById("ketqua").innerText =
+                    "Vui lòng nhập tên!";
+                return;
+            }
+
+            let nghe = [
+                "Lập trình viên",
+                "Giáo viên",
+                "Bác sĩ",
+                "Kỹ sư",
+                "Nhà thiết kế",
+                "Đầu bếp"
+            ];
+
+            let ngauNhien =
+                nghe[Math.floor(Math.random() * nghe.length)];
+
+            document.getElementById("ketqua").innerText =
+                ten + " được dự đoán sẽ làm nghề: " + ngauNhien;
+        }
+    </script>
+</body>
+</html>

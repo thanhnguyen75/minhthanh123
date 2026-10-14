@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 13 - Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <h2>Chuyển đổi nhiệt độ</h2>
+
+    <input type="number" id="c" placeholder="Nhập độ C">
+    <button onclick="chuyenDoi()">Chuyển đổi</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function chuyenDoi() {
+            let s = document.getElementById("c").value;
+
+            if (s === "") {
+                document.getElementById("ketqua").innerText =
+                    "Vui lòng nhập nhiệt độ!";
+                return;
+            }
+
+            let c = Number(s);
+            let f = (9 / 5) * c + 32;
+
+            document.getElementById("ketqua").innerText =
+                c + "°C = " + f.toFixed(2) + "°F";
+        }
+    </script>
+</body>
+</html>

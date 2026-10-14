@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 14 - Tính BMI</title>
+</head>
+<body>
+    <h2>Tính chỉ số BMI</h2>
+
+    <input type="number" id="chieuCao" step="0.01"
+           placeholder="Chiều cao (m)">
+    <input type="number" id="canNang" step="0.1"
+           placeholder="Cân nặng (kg)">
+
+    <button onclick="tinhBMI()">Tính BMI</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function tinhBMI() {
+            let sh = document.getElementById("chieuCao").value;
+            let sc = document.getElementById("canNang").value;
+
+            let h = Number(sh);
+            let w = Number(sc);
+
+            if (sh === "" || sc === "" || h <= 0 || w <= 0) {
+                document.getElementById("ketqua").innerText =
+                    "Vui lòng nhập dữ liệu hợp lệ!";
+                return;
+            }
+
+            let bmi = w / (h * h);
+            let ketLuan;
+
+            if (bmi < 18.5) {
+                ketLuan = "Gầy";
+            } else if (bmi < 25) {
+                ketLuan = "Bình thường";
+            } else if (bmi < 30) {
+                ketLuan = "Thừa cân";
+            } else {
+                ketLuan = "Béo phì";
+            }
+
+            document.getElementById("ketqua").innerText =
+                "Chỉ số BMI: " + bmi.toFixed(2) +
+                " - " + ketLuan;
+        }
+    </script>
+</body>
+</html>

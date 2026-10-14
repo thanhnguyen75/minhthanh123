@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10 - Máy tính</title>
+</head>
+<body>
+    <h2>Máy tính đơn giản</h2>
+
+    <input type="number" id="a" placeholder="Số thứ nhất">
+    <input type="number" id="b" placeholder="Số thứ hai">
+
+    <br>
+
+    <button onclick="tinh('+')">Cộng</button>
+    <button onclick="tinh('-')">Trừ</button>
+    <button onclick="tinh('*')">Nhân</button>
+    <button onclick="tinh('/')">Chia</button>
+
+    <p id="ketqua"></p>
+
+    <script>
+        function tinh(phepTinh) {
+            let sa = document.getElementById("a").value;
+            let sb = document.getElementById("b").value;
+
+            if (sa === "" || sb === "") {
+                document.getElementById("ketqua").innerText =
+                    "Vui lòng nhập đủ hai số!";
+                return;
+            }
+
+            let a = Number(sa);
+            let b = Number(sb);
+            let kq;
+
+            if (phepTinh === "+") {
+                kq = a + b;
+            } else if (phepTinh === "-") {
+                kq = a - b;
+            } else if (phepTinh === "*") {
+                kq = a * b;
+            } else if (phepTinh === "/") {
+                if (b === 0) {
+                    document.getElementById("ketqua").innerText =
+                        "Không thể chia cho 0!";
+                    return;
+                }
+                kq = a / b;
+            }
+
+            document.getElementById("ketqua").innerText =
+                "Kết quả: " + kq;
+        }
+    </script>
+</body>
+</html>
