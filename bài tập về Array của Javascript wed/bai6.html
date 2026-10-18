@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6 - calculateAverage</title>
+</head>
+
+<body>
+    <h2>Bài 6: Tính trung bình cộng</h2>
+    <p>Mảng: [10, 20, 30, 40, 50]</p>
+    <button onclick="chayBai()">Chạy bài</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function calculateAverage(arr) {
+            if (arr.length === 0) return 0;
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum / arr.length;
+        }
+
+        function chayBai() {
+            document.getElementById("ketqua").textContent =
+                "Kết quả: " +
+                calculateAverage([10, 20, 30, 40, 50]);
+        }
+    </script>
+</body>
+
+</html>

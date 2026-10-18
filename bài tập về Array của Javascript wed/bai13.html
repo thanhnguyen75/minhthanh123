@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 13 - calculateGrade</title>
+</head>
+
+<body>
+    <h2>Bài 13: Xếp loại điểm</h2>
+    <p>Mảng điểm: [90, 95, 85]</p>
+    <button onclick="chayBai()">Chạy bài</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function calculateGrade(arr) {
+            if (arr.length === 0) return "F";
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+
+            let average = sum / arr.length;
+
+            if (average >= 90) return "A";
+            else if (average >= 80) return "B";
+            else if (average >= 70) return "C";
+            else if (average >= 60) return "D";
+            else return "F";
+        }
+
+        function chayBai() {
+            document.getElementById("ketqua").textContent =
+                "Xếp loại: " + calculateGrade([90, 95, 85]);
+        }
+    </script>
+</body>
+
+</html>

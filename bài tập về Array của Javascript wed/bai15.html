@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 15 - removeDuplicates</title>
+</head>
+
+<body>
+    <h2>Bài 15: Xóa phần tử trùng lặp</h2>
+    <p>Mảng: [1, 2, 2, 3, 4, 4, 5]</p>
+    <button onclick="chayBai()">Chạy bài</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function removeDuplicates(arr) {
+            let result = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                let found = false;
+
+                for (let j = 0; j < result.length; j++) {
+                    if (arr[i] === result[j]) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) result.push(arr[i]);
+            }
+            return result;
+        }
+
+        function chayBai() {
+            document.getElementById("ketqua").textContent =
+                "Kết quả: " +
+                JSON.stringify(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+        }
+    </script>
+</body>
+
+</html>

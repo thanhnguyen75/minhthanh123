@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7 - isAscending</title>
+</head>
+
+<body>
+    <h2>Bài 7: Kiểm tra mảng tăng dần</h2>
+    <p>Mảng: [1, 2, 3, 5]</p>
+    <button onclick="chayBai()">Chạy bài</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function isAscending(arr) {
+            if (arr.length < 2) return false;
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] <= arr[i - 1]) return false;
+            }
+            return true;
+        }
+
+        function chayBai() {
+            document.getElementById("ketqua").textContent =
+                "Kết quả: " + isAscending([1, 2, 3, 5]);
+        }
+    </script>
+</body>
+
+</html>

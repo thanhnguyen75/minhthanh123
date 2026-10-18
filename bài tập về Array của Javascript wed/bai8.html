@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8 - countGreaterThan</title>
+</head>
+
+<body>
+    <h2>Bài 8: Đếm số lớn hơn value</h2>
+    <p>Mảng: [1, 5, 7, 2, 3]</p>
+    <p>Value: 3</p>
+    <button onclick="chayBai()">Chạy bài</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function countGreaterThan(arr, value) {
+            let count = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > value) count++;
+            }
+            return count;
+        }
+
+        function chayBai() {
+            document.getElementById("ketqua").textContent =
+                "Kết quả: " +
+                countGreaterThan([1, 5, 7, 2, 3], 3);
+        }
+    </script>
+</body>
+
+</html>

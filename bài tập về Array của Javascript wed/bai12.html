@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 12 - findLongestWord</title>
+</head>
+
+<body>
+    <h2>Bài 12: Tìm từ dài nhất</h2>
+    <p>Mảng: ["apple", "banana", "cherry", "date"]</p>
+    <button onclick="chayBai()">Chạy bài</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function findLongestWord(arr) {
+            if (arr.length === 0) return "";
+            let longest = arr[0];
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i].length > longest.length) {
+                    longest = arr[i];
+                }
+            }
+            return longest;
+        }
+
+        function chayBai() {
+            document.getElementById("ketqua").textContent =
+                "Kết quả: " +
+                findLongestWord(["apple", "banana", "cherry", "date"]);
+        }
+    </script>
+</body>
+
+</html>

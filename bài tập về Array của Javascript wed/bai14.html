@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 14 - findMissingNumber</title>
+</head>
+
+<body>
+    <h2>Bài 14: Tìm số thiếu</h2>
+    <p>Mảng: [1, 2, 4, 5, 6]</p>
+    <p>n = 6</p>
+    <button onclick="chayBai()">Chạy bài</button>
+    <p id="ketqua"></p>
+
+    <script>
+        function findMissingNumber(arr, n) {
+            let total = n * (n + 1) / 2;
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return total - sum;
+        }
+
+        function chayBai() {
+            document.getElementById("ketqua").textContent =
+                "Số còn thiếu: " +
+                findMissingNumber([1, 2, 4, 5, 6], 6);
+        }
+    </script>
+</body>
+
+</html>
