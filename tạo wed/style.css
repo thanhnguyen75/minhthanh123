@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+header p {
+    margin: 8px 0 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fbbf24;
+}
+
+#about {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto 50px;
+}
+
+#about h2,
+#products h2,
+#contact h2 {
+    color: #172554;
+    margin-bottom: 15px;
+}
+
+#about p {
+    margin: 8px 15px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 20px;
+    background: #f59e0b;
+    color: #172554;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background: #d97706;
+    color: white;
+}
+
+#products {
+    background: white;
+    padding: 35px 6%;
+    text-align: center;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 18px;
+    box-shadow: 0 3px 8px #ddd;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin: 12px 5px 8px;
+}
+
+.card span {
+    color: #d97706;
+    font-weight: bold;
+}
+
+#contact {
+    background: #e8eef9;
+    text-align: center;
+    padding: 30px;
+}
+
+#contact p {
+    margin: 6px;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 750px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    nav {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.buy-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 9px 25px;
+    background: #172554;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buy-button:hover {
+    background: #f59e0b;
+    color: #172554;
+}
